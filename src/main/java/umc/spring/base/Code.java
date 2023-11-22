@@ -34,7 +34,12 @@ public enum Code {
     // For test
     TEMP_EXCEPTION(HttpStatus.BAD_REQUEST, "TEMP4001", "테스트임"),
 
-    FOOD_CATEGORY_NOT_FOUND(HttpStatus.BAD_REQUEST, "FOOD4001", "음식카테고리가 없습니다.");
+    FOOD_CATEGORY_NOT_FOUND(HttpStatus.BAD_REQUEST, "FOOD4001", "음식카테고리가 없습니다."),
+
+    MISSION_NOT_FOUND(HttpStatus.BAD_REQUEST, "MISSION4001", "미션이 없습니다."),
+    MISSION_ALREADY_REGISTER(HttpStatus.BAD_REQUEST, "MISSION4002", "미션이 이미 등록되어 있습니다."),
+
+    STORE_NOT_FOUND(HttpStatus.BAD_REQUEST, "STORE4001", "존재하지 않는 가게입니다.");
 
     private final HttpStatus httpStatus;
     private final String code;

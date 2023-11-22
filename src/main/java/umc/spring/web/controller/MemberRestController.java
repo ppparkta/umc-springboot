@@ -22,8 +22,11 @@ public class MemberRestController {
     private final MemberCommandService memberCommandService;
 
     @PostMapping("/")
-    public ResponseDto<MemberResponseDTO.JoinResultDTO> join(@RequestBody @Valid MemberRequestDTO.JoinDto request) {
+    public ResponseDto<MemberResponseDTO.JoinResultDTO> join(
+            @RequestBody @Valid MemberRequestDTO.JoinDto request) {
         Member member = memberCommandService.joinMember(request);
-        return ResponseDto.onSuccess(MemberConverter.toJoinResultDTO(member), Code.OK);
+        return ResponseDto.onSuccess(
+                MemberConverter.toJoinResultDTO(member),
+                Code.OK);
     }
 }
